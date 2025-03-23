@@ -1,4 +1,4 @@
-# Template for policies for use in Compliance Framework plugins
+# Plugin kubernetes cluster policies
 
 ## Testing
 
