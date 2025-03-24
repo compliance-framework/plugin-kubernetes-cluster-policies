@@ -5,5 +5,5 @@ violation[{
     "description": "The kubelet audit logs have not been found and should be collected and sent to a centralized logging system",
     "severity": "high"
 }] if {
-    not input.auditLogs
+    not input.statsSummary.auditLogs
 }

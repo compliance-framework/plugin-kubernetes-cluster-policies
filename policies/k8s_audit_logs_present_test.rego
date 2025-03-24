@@ -3,7 +3,9 @@ package compliance_framework.template.k8s_audit_logs_present
 # Test for when auditLogs are present
 test_audit_logs_present if {
     count(violation) == 0 with input as {
-        "auditLogs": []
+        "statsSummary": {
+            "auditLogs": []
+        }
     }
 }
 
@@ -14,6 +16,7 @@ test_audit_logs_missing if {
         "description": "The kubelet audit logs have not been found and should be collected and sent to a centralized logging system",
         "severity": "high"
     }] with input as {
-        "someOtherConfig": {}
+        "statsSummary": {
+        }
     }
 }
